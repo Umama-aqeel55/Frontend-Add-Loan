@@ -1,153 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Loan</title>
-    <link rel="stylesheet" href="addLoan.css">
-</head>
-<body>
+    <link rel="stylesheet" href="addLoan.css" />
+  </head>
+  <body>
     <div class="container">
-        <h2 class="form-title">Add Loan</h2>
+      <h2 class="form-title">Add Loan</h2>
 
-        <form id="addLoanForm">
-            <div class="form-section">
-                <div class="form-group">
-                    <label for="loanProduct">Loan Product</label>
-                    <div class="input-with-link">
-                        <select id="loanProduct" name="loanProduct" class="form-control">
-                            <option value="">Select Product</option>
-                            <option value="CFC-01" selected>CFC-01</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                        </select>
-                        <a href="#" class="add-edit-link">Add/Edit Loan Products</a>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="borrower">Borrower</label>
-                    <select id="borrower" name="borrower" class="form-control">
-                        <option value="">Select Borrower</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="loanNumber">Loan #</label>
-                    <div class="input-with-link">
-                        <input type="text" id="loanNumber" name="loanNumber" class="form-control" value="909103000101-0084" readonly>
-                        <a href="#" class="add-edit-link" id="setCustomLoanBtn">Set Custom Loan #</a>
-                    </div>
-                </div>
+      <form id="addLoanForm">
+        <div class="form-section">
+          <div class="form-group">
+            <label for="loanProduct">Loan Product</label>
+            <div class="input-with-link">
+              <select id="loanProduct" name="loanProduct" class="form-control">
+                <option value="">Select Product</option>
+                <option value="CFC-01" selected>CFC-01</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+              </select>
+              <a href="#" class="add-edit-link">Add/Edit Loan Products</a>
             </div>
+          </div>
 
-            <div class="form-section ">
-                <div class="form-group">
-                <label for="principalAmount">Principal Amount <span class="required-asterisk">*</span></label>
-                <input type="number" class="form-control">
-                </div>
+          <div class="form-group">
+            <label for="borrower">Borrower</label>
+            <select id="borrower" name="borrower" class="form-control">
+              <option value="">Select Borrower</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="loanNumber">Loan #</label>
+            <div class="input-with-link">
+              <input
+                type="text"
+                id="loanNumber"
+                name="loanNumber"
+                class="form-control"
+                value="909103000101-0084"
+                readonly
+              />
+              <a href="#" class="add-edit-link" id="setCustomLoanBtn"
+                >Set Custom Loan #</a
+              >
             </div>
-            <div class="form-section custom-fields-section">
-                <div class="form-group">
-                    <label for="bankWalletName">Bank / Wallet Name <span class="required-asterisk">*</span></label>
-                    <select id="bankWalletName" name="bankWalletName" class="form-control">
-                        <option value="">Select Bank / Wallet Name</option>
-                        <option value="Bank A">Bank A</option>
-                        <option value="Wallet X">Wallet X</option>
-                    </select>
-                </div>
+          </div>
+        </div>
 
-                <div class="form-group">
-                    <label for="bankAccountIBAN">Bank Account / IBAN <span class="required-asterisk">*</span></label>
-                    <input type="text" id="bankAccountIBAN" name="bankAccountIBAN" class="form-control" placeholder="Bank Account / IBAN">
-                </div>
+        <div class="form-section">
+          <div class="form-group">
+            <label for="principalAmount"
+              >Principal Amount <span class="required-asterisk">*</span></label
+            >
+            <input type="number" class="form-control" />
+          </div>
+        </div>
+        <div class="form-section custom-fields-section">
+          <div class="form-group">
+            <label for="bankWalletName"
+              >Bank / Wallet Name
+              <span class="required-asterisk">*</span></label
+            >
+            <select
+              id="bankWalletName"
+              name="bankWalletName"
+              class="form-control"
+            >
+              <option value="">Select Bank / Wallet Name</option>
+              <option value="Bank A">Bank A</option>
+              <option value="Wallet X">Wallet X</option>
+            </select>
+          </div>
 
-                <div class="form-group">
-                    <label for="guarantor1Name">1 - Guarantor Name (Internal) <span class="required-asterisk">*</span></label>
-                    <input type="text" id="guarantor1Name" name="guarantor1Name" class="form-control" placeholder="1 - Guarantor Name (Internal)">
-                </div>
+          <div class="form-group">
+            <label for="bankAccountIBAN"
+              >Bank Account / IBAN
+              <span class="required-asterisk">*</span></label
+            >
+            <input
+              type="text"
+              id="bankAccountIBAN"
+              name="bankAccountIBAN"
+              class="form-control"
+              placeholder="Bank Account / IBAN"
+            />
+          </div>
 
-<div class="form-group">
-    <label for="Address">Address <span class="required-asterisk">*</span></label>
-    <input type="text"
-    id="address"
-    name="address"
-    class="form-control">
-</div>
-                <div class="form-group">
-                    <label for="guarantor1CNIC">1 - Guarantor CNIC # <span class="required-asterisk">*</span></label>
-                    <input type="text" id="guarantor1CNIC" name="guarantor1CNIC" class="form-control" placeholder="1 - Guarantor CNIC #">
-                </div>
+          <div class="form-group">
+            <label for="guarantor1Name"
+              >1 - Guarantor Name (Internal)
+              <span class="required-asterisk">*</span></label
+            >
+            <input
+              type="text"
+              id="guarantor1Name"
+              name="guarantor1Name"
+              class="form-control"
+              placeholder="1 - Guarantor Name (Internal)"
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="guarantor1dateOfBirth">1 - Guarantor Date of Birth<span class="required-asterisk">*</span></label>
-                    <input type="date" id="guarantor1DateofBirth" name="guarantor1DateofBirth" class="form-control">
-                </div>
+          <div class="form-group">
+            <label for="guarantor1Address"
+              >1- Guarantor Address <span class="required-asterisk">*</span></label
+            >
+            <input
+              type="text"
+              id="address"
+              name="address"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="guarantor1CNIC"
+              >1 - Guarantor CNIC #
+              <span class="required-asterisk">*</span></label
+            >
+            <input
+              type="text"
+              id="guarantor1CNIC"
+              name="guarantor1CNIC"
+              class="form-control"
+              placeholder="1 - Guarantor CNIC #"
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="guarantor1CNICExpiryDate">1 - Guarantor CNIC Expiry Date <span class="required-asterisk">*</span></label>
-                    <input type="date" id="guarantor1CNICExpiryDate" name="guarantor1CNICExpiryDate" class="form-control">
-                </div>
+          <div class="form-group">
+            <label for="guarantor1dateOfBirth"
+              >1 - Guarantor Date of Birth<span class="required-asterisk"
+                >*</span
+              ></label
+            >
+            <input
+              type="date"
+              id="guarantor1DateofBirth"
+              name="guarantor1DateofBirth"
+              class="form-control"
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="guarantor1Relation">1 - Guarantor Relation <span class="required-asterisk">*</span></label>
-                    <select id="guarantor1Relation" name="guarantor1Relation" class="form-control">
-                        <option value="">Other</option>
-                        <option value="Family">Family</option>
-                        <option value="Friend">Friend</option>
-                    </select>
-                </div>
+          <div class="form-group">
+            <label for="guarantor1CNICExpiryDate"
+              >1 - Guarantor CNIC Expiry Date
+              <span class="required-asterisk">*</span></label
+            >
+            <input
+              type="date"
+              id="guarantor1CNICExpiryDate"
+              name="guarantor1CNICExpiryDate"
+              class="form-control"
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="guarantor1Mobile">1 - Guarantor Mobile # <span class="required-asterisk">*</span></label>
-                    <input type="text" id="guarantor1Mobile" name="guarantor1Mobile" class="form-control" placeholder="1 - Guarantor Mobile #">
-                </div>
+          <div class="form-group">
+            <label for="guarantor1Relation"
+              >1 - Guarantor Relation
+              <span class="required-asterisk">*</span></label
+            >
+            <select
+              id="guarantor1Relation"
+              name="guarantor1Relation"
+              class="form-control"
+            >
+              <option value="">Other</option>
+              <option value="Family">Family</option>
+              <option value="Friend">Friend</option>
+            </select>
+          </div>
 
-                <div class="form-group">
-                    <label for="guarantor2Name">2 - Guarantor Name (External) <span class="required-asterisk">*</span></label>
-                    <input type="text" id="guarantor2Name" name="guarantor2Name" class="form-control" placeholder="2 - Guarantor Name (External)">
-                </div>
+          <div class="form-group">
+            <label for="guarantor1Mobile"
+              >1 - Guarantor Mobile #
+              <span class="required-asterisk">*</span></label
+            >
+            <input
+              type="text"
+              id="guarantor1Mobile"
+              name="guarantor1Mobile"
+              class="form-control"
+              placeholder="1 - Guarantor Mobile #"
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="guarantor2CNIC">2 - Guarantor CNIC # <span class="required-asterisk">*</span></label>
-                    <input type="text" id="guarantor2CNIC" name="guarantor2CNIC" class="form-control" placeholder="2 - Guarantor CNIC #">
-                </div>
+          <div class="form-group">
+            <label for="guarantor2Name"
+              >2 - Guarantor Name (External)
+              <span class="required-asterisk">*</span></label
+            >
+            <input
+              type="text"
+              id="guarantor2Name"
+              name="guarantor2Name"
+              class="form-control"
+              placeholder="2 - Guarantor Name (External)"
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="guarantor2CNICIssueDate">2 - Guarantor Date Of Birth <span class="required-asterisk">*</span></label>
-                    <input type="date" id="guarantor2DateofBirth" name="guarantor2DateofBirth" class="form-control">
-                </div>
+          <div class="form-group">
+            <label for="guarantor2Address"
+              >2 - Guarantor Address
+              <span class="required-asterisk">*</span></label
+            >
+            <input
+              type="text"
+              name="Address"
+              id="address"
+              class="form-control"
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="guarantor2CNICExpiryDate">2 - Guarantor CNIC Expiry Date <span class="required-asterisk">*</span></label>
-                    <input type="date" id="guarantor2CNICExpiryDate" name="guarantor2CNICExpiryDate" class="form-control">
-                </div>
+          <div class="form-group">
+            <label for="guarantor2CNIC"
+              >2 - Guarantor CNIC #
+              <span class="required-asterisk">*</span></label
+            >
+            <input
+              type="text"
+              id="guarantor2CNIC"
+              name="guarantor2CNIC"
+              class="form-control"
+              placeholder="2 - Guarantor CNIC #"
+            />
+          </div>
 
-                   <div class="form-group">
-                    <label for="guarantor2Mobile">2 - Guarantor Mobile #<span class="required-asterisk">*</span></label>
-                    <input type="text" id="guarantor2Mobile" class="form-control"placeholder="2 - Guarantor Mobile #">
-                </div>
-                <div class="form-group">
-                    <label for="Risk Management Officer">Risk Management Officer<span class="required-asterisk">*</span></label>
-                    <select name="riskManagementOfficer" id="riskOfficer"
-                    class="form-control"><option value="">Select Risk Managemnt officer</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                </select>
-                </div>
-            </div>
+          <div class="form-group">
+            <label for="guarantor2CNICIssueDate"
+              >2 - Guarantor Date Of Birth
+              <span class="required-asterisk">*</span></label
+            >
+            <input
+              type="date"
+              id="guarantor2DateofBirth"
+              name="guarantor2DateofBirth"
+              class="form-control"
+            />
+          </div>
 
+          <div class="form-group">
+            <label for="guarantor2CNICExpiryDate"
+              >2 - Guarantor CNIC Expiry Date
+              <span class="required-asterisk">*</span></label
+            >
+            <input
+              type="date"
+              id="guarantor2CNICExpiryDate"
+              name="guarantor2CNICExpiryDate"
+              class="form-control"
+            />
+          </div>
 
-            <div class="form-actions">
-                <button type="button" class="btn btn-secondary">Cancel</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
+          <div class="form-group">
+            <label for="guarantor2Mobile"
+              >2 - Guarantor Mobile #<span class="required-asterisk"
+                >*</span
+              ></label
+            >
+            <input
+              type="text"
+              id="guarantor2Mobile"
+              class="form-control"
+              placeholder="2 - Guarantor Mobile #"
+            />
+          </div>
+          <div class="form-group">
+            <label for="Risk Management Officer"
+              >Risk Management Officer<span class="required-asterisk"
+                >*</span
+              ></label
+            >
+            <select
+              name="riskManagementOfficer"
+              id="riskOfficer"
+              class="form-control"
+            >
+              <option value="">Select Risk Managemnt officer</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
 
     <script src="addLoan.js"></script>
-</body>
+  </body>
 </html>
